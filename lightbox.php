@@ -3,7 +3,7 @@
 Plugin Name: Lightbox M
 Plugin URI: http://cheon.info/707
 Description: Media types : Images |  Twitter Media |  Social Video |  Flash |  Video |  Audio |  Inline |  HTML. Lightbox M v1.0.1 by <cite><a href="http://cheon.info/707" title="Lightbox M v1.0.1 ">CheonNii</a>.</cite>
-Version: 1.0.2
+Version: 1.0.2.1
 Author: CheonNii
 Author URI: http://cheon.info
 
@@ -42,10 +42,9 @@ $lightbox_files = Array(
 	'images/WhitePrevious.gif',
 	'js/mediaboxAdv-1.1.7.js',
 	'js/mootools-1.2.4-core-yc.js',
-	'js/swfobject.js',
 	'swf/NonverBlaster.swf',
 	'swf/player-viral.swf',
-	'lightbox.php',
+	'lightbox.php'
 );
 
 function lightbox_wp_head() {
@@ -109,7 +108,7 @@ function lightbox_restore_config($force=False) {
 
 	// style
 	if ($force or !is_string(get_option('lightbox_style')))
-		update_option('lightbox_style', "" . __("#000000", 'lightbox') . "");
+		update_option('lightbox_style', 'Black');
 
 	// only display on single posts and pages by default
 	if ($force or !is_array(get_option('lightbox_conditionals')))
