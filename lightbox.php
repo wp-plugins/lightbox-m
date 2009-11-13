@@ -3,7 +3,7 @@
 Plugin Name: Lightbox M
 Plugin URI: http://cheon.info/707
 Description: Media types : Images |  Twitter Media |  Social Video |  Flash |  Video |  Audio |  Inline |  HTML. Lightbox M v1.0.1 by <cite><a href="http://cheon.info/707" title="Lightbox M v1.0.1 ">CheonNii</a>.</cite>
-Version: 1.0.1
+Version: 1.0.2
 Author: CheonNii
 Author URI: http://cheon.info
 
@@ -140,10 +140,10 @@ function lightbox_upload_errors() {
 
 	$cwd = getcwd(); // store current dir for restoration
 	if (!@chdir('../wp-content/plugins'))
-		return __("Couldn't find wp-content/lightbox-cheon.info folder. Please make sure WordPress is installed correctly.", 'lightbox');
-	if (!is_dir('lightbox-cheon.info'))
-		return __("Can't find lightbox-cheon.info folder.", 'lightbox');
-	chdir('lightbox-cheon.info');
+		return __("Couldn't find wp-content/lightbox-m folder. Please make sure WordPress is installed correctly.", 'lightbox');
+	if (!is_dir('lightbox-m'))
+		return __("Can't find lightbox-m folder.", 'lightbox');
+	chdir('lightbox-m');
 
 	foreach($lightbox_files as $file) {
 		if (substr($file, -1) == '/') {
@@ -253,7 +253,7 @@ function lightbox_submenu() {
 	}
 
 	if ($str = lightbox_upload_errors())
-		lightbox_message("$str</p><p>" . __("In your plugins/lightbox-cheon.info folder, you must have these files:", 'lightbox') . ' <pre>' . implode("\n", $lightbox_files) ); 
+		lightbox_message("$str</p><p>" . __("In your plugins/lightbox-m folder, you must have these files:", 'lightbox') . ' <pre>' . implode("\n", $lightbox_files) ); 
 
 	// load options from db to display
 	$style 		= stripslashes(get_option('lightbox_style'));
