@@ -2,8 +2,8 @@
 /*
 Plugin Name: Lightbox M
 Plugin URI: http://cheon.info/707
-Description: Media types : Images |  Twitter Media |  Social Video |  Flash |  Video |  Audio |  Inline |  HTML. Lightbox M v1.0.1 by <cite><a href="http://cheon.info/707" title="Lightbox M v1.0.1 ">CheonNii</a>.</cite>
-Version: 1.0.2.1
+Description: Media types : Images |  Twitter Media |  Social Video |  Flash |  Video |  Audio |  Inline |  HTML. Lightbox M v1.0.3 by <cite><a href="http://cheon.info/707" title="Lightbox M v1.0.3 ">CheonNii</a>.</cite>
+Version: 1.0.3
 Author: CheonNii
 Author URI: http://cheon.info
 
@@ -53,7 +53,7 @@ function lightbox_wp_head() {
 	$lightboxlb_resize = get_option("lightbox_lb_resize");
 	$lightboxoff = false;
 	$lightboxoffmeta = get_post_meta($post->ID,'lightboxoff',true);
-	if ($lightboxoffmeta == "false") {
+	if (!is_admin() && $lightboxoffmeta == "false") {
 		echo '<link rel="stylesheet" type="text/css" media="screen" href="' . $lightboxpluginpath . 'css/mediaboxAdv' . $lightboxstyle . '.css" />'."\n";
 		echo '<script type="text/javascript"> var lightbox_path = \''.$lightboxpluginpath.'\'; </script>'."\n";
 		echo '<script type="text/javascript" src="' . $lightboxpluginpath . 'js/mediaboxAdv-1.1.7.js"></script>'."\n";
@@ -71,7 +71,7 @@ function lightbox_auto ($content) {
 }
 
 $lightbox_contitionals = get_option('lightbox_conditionals');
-if (is_array($lightbox_contitionals)) {
+if (!is_admin() && is_array($lightbox_contitionals)) {
 	wp_enqueue_script('mootools', $lightboxpluginpath . 'js/mootools-1.2.4-core-yc.js', array(), '1.2.4');
 	wp_enqueue_script('mootools');
 	wp_enqueue_script('swfobject');

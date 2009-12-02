@@ -36,3 +36,4 @@ Use the title attribute if you want to show a caption.
 == Frequently Asked Questions ==
 
 == Changelog ==
+1.0.3 Admin page do not load Lightbox M.
