@@ -3,7 +3,7 @@ Contributors: CheonNii
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=9VY22Y6HE6XQS&lc=C2&item_name=Donate%20to%20Lightbox%20M%20plugin%27s%20auther&no_note=1&no_shipping=1&rm=1&return=http%3a%2f%2fcheon%2einfo%2fexpress_gratitude&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Tags: javascript, images, lightbox, mootool, media
 Requires at least: 2.2
-Tested up to: 2.8.5
+Tested up to: 2.9.1
 stable tag: 2.0.2
 
 Plugin used to overlay images and media on the current page into neat Javascript-powered overlay popups.From settings you can choose box style add the lightbox effect to your post's images and media.
@@ -37,3 +37,4 @@ Use the title attribute if you want to show a caption.
 
 == Changelog ==
 1.0.3 Admin page do not load Lightbox M.
+1.0.4 mediaboxAdvanced is update to v1.2.0.

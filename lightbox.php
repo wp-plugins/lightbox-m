@@ -2,8 +2,8 @@
 /*
 Plugin Name: Lightbox M
 Plugin URI: http://cheon.info/707
-Description: Media types : Images |  Twitter Media |  Social Video |  Flash |  Video |  Audio |  Inline |  HTML. Lightbox M v1.0.3 by <cite><a href="http://cheon.info/707" title="Lightbox M v1.0.3 ">CheonNii</a>.</cite>
-Version: 1.0.3
+Description: Media types : Images |  Twitter Media |  Social Video |  Flash |  Video |  Audio |  Inline |  HTML. Lightbox M v1.0.4 by <cite><a href="http://cheon.info/707" title="Lightbox M v1.0.3 ">CheonNii</a>.</cite>
+Version: 1.0.4
 Author: CheonNii
 Author URI: http://cheon.info
 
@@ -40,10 +40,10 @@ $lightbox_files = Array(
 	'images/WhiteLoading.gif',
 	'images/WhiteNext.gif',
 	'images/WhitePrevious.gif',
-	'js/mediaboxAdv-1.1.7.js',
+	'js/mediaboxAdv-1.2.0.js',
 	'js/mootools-1.2.4-core-yc.js',
 	'swf/NonverBlaster.swf',
-	'swf/player-viral.swf',
+	'swf/player.swf',
 	'lightbox.php'
 );
 
@@ -56,7 +56,7 @@ function lightbox_wp_head() {
 	if (!is_admin() && $lightboxoffmeta == "false") {
 		echo '<link rel="stylesheet" type="text/css" media="screen" href="' . $lightboxpluginpath . 'css/mediaboxAdv' . $lightboxstyle . '.css" />'."\n";
 		echo '<script type="text/javascript"> var lightbox_path = \''.$lightboxpluginpath.'\'; </script>'."\n";
-		echo '<script type="text/javascript" src="' . $lightboxpluginpath . 'js/mediaboxAdv-1.1.7.js"></script>'."\n";
+		echo '<script type="text/javascript" src="' . $lightboxpluginpath . 'js/mediaboxAdv-1.2.0.js"></script>'."\n";
 	}
 }
 
